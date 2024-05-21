@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: rgb(247, 204, 204);
+    color: rgb(24, 24, 24);
+}
+
+header{
+    width: 90%;margin: 0 auto;
+    background-color: rgb(226, 205, 205);
+    box-shadow: 1px 1px 5px #000;
+}
+img{
+    display: block;
+    width: 500px;
+}
+/* these are like a default properties that are inclided in almost every css stylling */
+
+
+header{
+    display: flex;justify-content: space-between;
+    box-shadow: 0.5px 0.5px 10px rgb(82, 79, 79);
+    position: relative;
+    top: 4rem;
+}
+
+header .image-container{
+    width: 500px;
+    padding: 2px;
+    display: flex;align-items: center;justify-content: center;
+}
+
+header .giveaway-details{
+    width:68%;
+}
+
+.giveaway-details .heading{
+    
+    text-align: left;margin: 0.5rem 0;
+    padding-left: 1rem;
+}
+
+.giveaway-details .deadline{
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 650;
+    text-align: left;padding-left: 1rem;
+}
+
+.giveaway-details .desc{
+    
+    font-weight: 650;
+    text-align: left;padding-left: 1rem;
+    text-align: justify;
+    margin: 1rem 0;
+}
+
+.giveaway-details .count-down{
+    
+    text-align: left;padding-left: 1rem;
+    text-align: justify;
+    margin: 1rem 0;
+    
+    display: flex;
+}
+.giveaway-details .count-down div{
+    display: block;
+    
+    width: 80px;height: 50px;
+    display: flex;flex-direction: column;align-items: center;justify-content: center;
+    margin: 0 0.5rem;
+    color: #f4f4f4;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.giveaway-details .count-down div h4{
+    font-size: 1.5rem;
+    
+}
+.giveaway-details .count-down div span{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 0.8rem;
+}
+
+@media(max-width:1020px){
+    header .image-container{
+        transition: 0.1s ease-in-out;
+        width: 100%;
+    }
+    header .image-container img{
+        transition: 0.1s ease-in-out;
+        width: 100%;
+    }
+}
+
+@media(max-width:920px){
+    header{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;align-items: center;
+        
+    }
+}

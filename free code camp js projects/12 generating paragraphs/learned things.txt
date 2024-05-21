@@ -1,0 +1,6 @@
+Making the webpage dynamic by the help of the java script 
+
+var inputelement=Document.QuerySelecore("#......");
+than to get the inputed value use
+
+const inputed_value=inputelement.value;

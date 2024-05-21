@@ -1,0 +1,163 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --cell-size:120px;
+    --mark-size:calc(var(--cell-size)*0.90);
+}
+ body{
+     background-color: rgb(209, 243, 209);
+ }
+ .game-board{
+     width: 100vw;
+     height: 100vh;
+     display: grid;
+            /* temp properties */
+     justify-content: flex-start /* center */;
+     margin-left: 4rem;
+            /* temp properties */
+     align-content: center;
+     grid-template-columns: repeat(3,auto);
+ }
+ .cell{
+     width:var(--cell-size);height: var(--cell-size);
+     border: solid 2px #000;
+     position: relative;
+     display:flex;
+     align-items: center;justify-content: center;
+ }
+
+ .cell:nth-child(1),
+ .cell:nth-child(2),
+ .cell:nth-child(3){
+     border-top: none;
+ }
+ .cell:nth-child(3n+1){
+     border-left: none;
+ }
+ .cell:nth-child(3n+3){
+     border-right: none;
+ }
+ .cell:nth-child(7),
+ .cell:nth-child(8),
+ .cell:nth-child(9){
+     border-bottom: none;
+ }
+
+
+ /* making the cross and the circle both inside the css */
+
+
+ /* MAKING A CROSS */
+
+ .game-board.x .cell:not(.x):not(.circle):hover::before,                                               /* it basically means if .board contains.x class than on hovering the */
+ .game-board.x .cell:not(.x):not(.circle):hover::after,                                                /* inside cell following codes gets applied */
+ .cell.x::before,
+ .cell.x::after{
+ position: absolute;
+ content:"";
+ height: var(--mark-size);
+ width: calc(var(--mark-size)*.15);                                            /* we want our width of the cross 15% of our height */
+ background-color: #000;
+ }
+ .game-board.x .cell:not(.x):not(.circle):hover::before,
+ .cell.x::before{
+     transform: rotate(45deg);
+ }
+ .game-board.x .cell:not(.x):not(.circle):hover::after,
+ .cell.x::after{
+    transform: rotate(-45deg);
+}
+
+
+
+
+
+
+/* MAKING A CIRCLE */
+
+.game-board.circle .cell:not(.x):not(.circle):hover::before,
+.game-board.circle .cell:not(.x):not(.circle):hover::after,
+.cell.circle::before,
+.cell.circle::after{
+    border-radius: 50%;
+}
+.game-board.circle .cell:not(.x):not(.circle):hover::before,
+.cell.circle::before{
+    position: absolute;
+    content: "";
+    width: var(--mark-size);
+    height: var(--mark-size);
+    background-color: black;
+}
+.game-board.circle .cell:not(.x):not(.circle):hover::after,
+.cell.circle::after{
+    position: absolute;
+    content: "";
+    width: calc(var(--mark-size)*0.7);
+    height:calc(var(--mark-size)*0.7);
+    background-color: white;
+}
+
+
+
+
+
+/* light background to those generated crosses and circles on hovering */
+.game-board.x .cell:not(.x):not(.circle):hover::before,                                               
+.game-board.x .cell:not(.x):not(.circle):hover::after,
+.game-board.circle .cell:not(.x):not(.circle):hover::before
+{
+    background-color:lightgray;
+}
+
+
+
+
+/* we want cursor as pointer in the empty boxes and not-allowed in occupied boxes*/
+
+.cell{
+    cursor: pointer;
+}
+.cell.x,.cell.circle{
+    cursor: not-allowed;
+}
+
+
+
+/* stylling the sinning message display */
+.winning-message{
+    position: fixed;
+    top: 0;left: 0;
+    width: 100vw;height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;align-items: center;justify-content: center;
+    display: none;
+}
+.winning-message h1{
+    color: white;
+    font-size: 4rem;
+
+}
+
+.winning-message button{
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    font-size: 2.2rem;
+    margin-left: 1rem;
+    border-radius: 7px;
+}
+
+.winning-message button:hover{
+    background-color: black;
+    color: white;
+    border: solid white 1px;
+}
+
+.winning-message.show{
+    display: flex;
+}

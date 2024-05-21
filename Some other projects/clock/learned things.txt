@@ -1,0 +1,11 @@
+1) Visual code emmets are really helpful 
+  like div.number.number$*12{$}*12
+2) transform: rotate(--rotation);
+  here --rotation is a css variable but we can set it's value from the java script.
+
+
+DOM_Element.style.setProperty("property_name",value);
+  here css property is set in the inlinc but don't know how is rotate() function in external style sheet is getting the 
+  --rotation value set in the inline style.
+
+3) calc( ) it is a nice function in css 

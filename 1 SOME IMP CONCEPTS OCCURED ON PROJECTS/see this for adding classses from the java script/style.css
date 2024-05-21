@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgb(34, 33, 33);
+    font-family: sans-serif;
+}
+img{
+   /* display: block;
+    max-width: 100%;*/
+}
+html{
+    background-color: #feffe9bd;
+}
+ul{
+    list-style: none;padding: 0;
+}
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* these are some default like or some important/ compulsary type of properties */
+
+.container{
+    display: flex;
+}
+.container1,.container2{
+    width: 200px;
+    height: 200px;
+    background-color: khaki;
+    margin: 1rem;
+}
+.disp-show{
+    display: block;
+}
+.disp-none{
+    display: none;
+}

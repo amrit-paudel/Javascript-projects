@@ -1,0 +1,12 @@
+1) when ever an object is created from the class first of all it's constructor 
+function is called so if we call another function inside the constructor same function is also called.
+2) so we can set all the required variables like 
+   this.variable _name='';
+   this.variable_name='';
+empty or any first default value to another function and can call that function in constructor function
+just like we did in clear function in this project .
+
+ 3) I FOUND THAT I FORGET TO WRITE 'this' IN FRONT OF VARIABLES WHILE WORKING IN CLASS
+
+ 4) using 'defer' can be helpful some times 
+  i.e  <script src="app.js" defer> </script>

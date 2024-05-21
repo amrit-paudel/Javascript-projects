@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    --sun-color:rgb(255, 255, 0);
+    --moon-color:rgba(255, 255, 255, 0.856);
+    --button-color:green;
+    --text-color:black;
+    --button-text-color:black;
+    --background-color: white;
+
+     background-color: var(--background-color);
+
+
+    width: 100vw;height: 100vh;
+    display: flex;align-items:center;justify-content: center;
+    flex-direction: column;
+
+    --sun-disp:block;
+    --moon-disp:none;
+    
+}
+
+.title{
+    font-family: sans-serif;
+    font-size: 3.5rem;
+    color: var(--text-color);
+}
+
+.swap{
+    font-size: 2rem;
+    border: none;outline: none;
+    background-color: var(--button-color);
+    padding: 0.5rem 0.7rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    color: var(--button-text-color);
+}
+
+
+/* gives sense of if statement 
+if body contains dark class execute this code 
+
+also css variables are powerful and occupies less code 
+here things were changing so I use variables, basically that's what variables means.*/
+
+
+body.dark{
+    --background-color:#333;
+    --button-text-color:white;
+    --text-color:white;
+    --sun-disp:none;
+    --moon-disp:block;
+    --rotate-value:360deg;
+}
+
+
+
+
+
+
+/*
+body.dark{
+    background-color: #333;
+}
+body.dark .title{
+    color: white;
+}
+
+body.dark button{
+    color: white;
+}
+*/
+
+
+
+
+
+
+
+.swap:hover{
+    cursor: pointer;
+    transition: transform ease-in-out 0.5s;
+    transform: scale(1.2);
+}
+
+.sunMoon{
+    z-index: -1000;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;flex-direction: column;justify-content: space-between;
+    align-items: center;
+
+    transition: transform 1.5s ease-in-out;
+    
+   transform: rotate(var(--rotate-value));
+}
+.sun,.moon{
+    position: relative;
+    width: 100px;height:100px;
+    background-color: yellow;
+    border-radius: 50%;
+    display: flex;align-items: center;justify-content: center;
+    font-size:1.5rem;font-family: sans-serif;
+}
+.sun{
+   display: var(--sun-disp);
+   
+}
+.moon{
+    display: var(--moon-disp);
+}

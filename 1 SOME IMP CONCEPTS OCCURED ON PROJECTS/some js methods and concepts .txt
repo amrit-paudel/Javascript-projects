@@ -1,0 +1,2 @@
+.value; aproperty to access the value of the inputed data by user
+"keyup"   it is an event just like "click"

@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(168, 168, 168);
+}
+.nav-container{
+    width: 100%;
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+ul{
+    list-style:none;padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #f4f4f4;font-family: sans-serif;font-size: 0.9rem;
+    text-transform: uppercase;
+}
+h3{
+    font-size: 1.3rem;font-weight: 600;font-family: sans-serif;
+}
+nav{
+    padding: 0.4rem 0;
+    display: flex;
+    height: 50px;                                                             /* just remove this one and see what happens */ 
+    position: relative;
+}
+.logo{
+    display: flex;align-items: center;justify-content: center;
+    width:12rem;
+}
+.logo>h3{
+    padding: 0.3rem ;
+} 
+
+.nav-links{
+    width: 100%;
+    display: flex;align-items: center;justify-content: flex-end;
+}
+.nav-links li a{
+    border: solid 1px white;
+    border-radius: 10px;
+    padding: 0.3rem 0.5rem;
+    margin: 0 4vw;                                            /* this is because as we resize our nav bar is decreassed or increased as per the viewport width */
+}
+.nav-links li a:hover{
+    background: rgba(204, 204, 204, 0.6);
+}
+
+
+/*stylling the menu bar */
+.menu-bar{
+    position: absolute;top: 0.7rem;right:1rem ;
+    font-size: 1.5rem;display: none;
+}
+.menu-bar:hover{
+    cursor: pointer;
+}
+
+/* adding the media queries */
+@media(max-width:800px){
+
+    nav{ 
+        
+        display: flex;
+        flex-direction: column;
+        height: auto;                                                            
+    }
+
+
+    .nav-links{
+        background-color: #333;
+        width: 100%;
+        height: 0;overflow: hidden;                                    /* instead of display none I thought of trying somethinf new this one */
+        display: flex;
+        flex-direction: column;
+        align-items: center;justify-content:space-between;
+    }
+    .menu-bar{
+        display: block;
+    }
+
+    .add-height{
+        transition:height 0.1s ease-out;
+        height: 200px;
+        padding: 1rem 0;
+    }
+}
+

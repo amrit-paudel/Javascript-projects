@@ -1,0 +1,235 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    max-width: 1500px;
+    min-width: 200px;
+    background-color: #ccc;
+    color: #000;
+    font-family: sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+/*now stylling nav bar */
+nav{
+    
+    position: relative;
+    display: flex;
+    height: 100px;
+}
+
+.logo{
+    
+    position: absolute;
+    top: 2rem;
+    padding: 0 0.5rem;
+}
+.menu{
+    position: absolute;
+    top: 2rem;right: 2rem;transform: translate(0,-50%);
+    font-size: 1.5rem;
+    display: none;
+}
+.nav-links{
+width: 100%;height: 100%;
+}
+.nav-list{
+ width: 100%;height: 100%;
+ display: flex;align-items: center;justify-content: center;
+}
+
+header nav .nav-links .nav-list li a{
+    text-transform: uppercase;font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;margin: 0 1rem;
+    border-radius: 10px;
+    background-color: #333;color: #ccc;
+    border-color: brown;
+}
+
+@media(max-width:950px){
+    .menu{
+        display: block;
+    }
+
+    .nav-list{
+        width: 100%;height: 100%;
+        display: none;flex-direction: column;align-items: flex-start;
+        justify-content: space-between;
+        margin-top: 4rem;
+       }
+
+    header nav .nav-links .nav-list li {
+        width: 100%;
+        margin: 1rem 1rem;
+    }
+    header nav .nav-links .nav-list li > a{
+        padding: 0.3rem 0.8rem;margin: 0 1rem;
+       
+    }
+
+
+    nav{
+        min-height: 100px;
+        height: auto;
+    }
+}
+
+
+/* this goes to java script */
+.flex{
+    display: flex;
+}
+
+.fixed-nav{
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* now stylling the sections */
+
+section{
+    position: relative;
+    width: 95%;margin: 0 auto;
+    margin-bottom: 2rem;
+    height:100vh;
+    z-index: 999;                                                 /* now in that overlay one we have z-index:-999  */
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 3px black;
+}
+section .section-head{
+    color: #f4f4f4;font-size: 2rem;
+    margin: 1rem 0;
+}
+section .section-para{
+    align-self: flex-start;
+    color: #f4f4f4b4;font-size: 1.2rem;
+    width: 50%;margin: 0 auto;
+    text-align: justify;
+    padding: 0 1rem;
+}
+
+/*media queries to the section */
+@media(max-width:800px){
+    section{
+        height: 80vh;
+    }
+}
+
+#home::after{
+    content: " ";
+    display: block;
+    position: absolute;top: 0;left: 0;width:100%;height: 100%;
+    background-image: url("https://images.pexels.com/photos/130576/pexels-photo-130576.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(56, 56, 58);
+    background-blend-mode: overlay;
+    z-index: -999;
+}
+#about::after{
+    content: " ";
+    display: block;
+    position: absolute;top: 0;left: 0;width:100%;height: 100%;
+    background-image: url("https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(56, 56, 58);
+    background-blend-mode: overlay;
+    z-index: -999;
+}
+#services::after{
+    content: " ";
+    display: block;
+    position: absolute;top: 0;left: 0;width:100%;height: 100%;
+    background-image: url("https://images.pexels.com/photos/3013440/pexels-photo-3013440.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(56, 56, 58);
+    background-blend-mode: overlay;
+    z-index: -999;
+}
+#tours::after{
+    content: " ";
+    display: block;
+    position: absolute;top: 0;left: 0;width:100%;height: 100%;
+    background-image: url("https://images.pexels.com/photos/130576/pexels-photo-130576.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(56, 56, 58);
+    background-blend-mode: overlay;
+    z-index: -999;
+}
+#contact::after{
+    content: " ";
+    display: block;
+    position: absolute;top: 0;left: 0;width:100%;height: 100%;
+    background-image: url("https://images.pexels.com/photos/2132115/pexels-photo-2132115.jpeg?cs=srgb&dl=pexels-quang-nguyen-vinh-2132115.jpg&fm=jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(56, 56, 58);
+    background-blend-mode: overlay;
+    z-index: -999;
+}
+
+footer{
+     display: flex;align-items: center;justify-content: center;
+    padding: 0.5rem 0;
+    margin: 1rem 0;
+    background-color: rgb(168, 168, 168);
+}
+footer span{
+    margin: 0 1rem;
+}
+
+
+
+
+/*this property is going to the java script */
+.fixed-nav{
+    transition: 0.1s ease-out;
+    z-index: 1000;
+    margin-top: 0;
+    position: fixed;top: 0;left: 0;
+    width: 100%;
+    background-color: rgb(168, 168, 168);
+    box-shadow: 1px 1px 2px rgb(71, 69, 69);
+    padding: 2rem 0;
+}
+
+html{
+    scroll-behavior: smooth;                                              /* Links will show up a bit more smoothly */
+}
+
+

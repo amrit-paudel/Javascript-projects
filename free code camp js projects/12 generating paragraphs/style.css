@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #bbbbbb;
+    font-family: 'Lato', sans-serif;
+}
+
+header{
+    width: 90%;height: auto;
+    margin: 5rem auto;
+    
+    display: flex;flex-direction: column;align-items: center;justify-content: center;
+
+}
+
+header h2{
+    font-size: 2rem;
+    padding: 0.5rem;
+    margin: 2rem 0;
+    background-color: #333;
+    color: #f4f4f4;
+    border-radius: 20px;
+}
+@media(max-width:525px){                                                                        /*   just by doing this the question makr did not mve to next line when we resize   */
+    header h2{
+        font-size: 1.9rem;
+    }
+}
+
+
+
+header label{
+    
+    font-size: 1.5rem;
+    background-color: rgb(112, 114, 228);
+    color: #f4f4f4;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+header input{
+    border:none;
+    background-color: #ccc;
+    color: #333;
+    font-size: 1.5rem;font-weight: 700;
+    width: 10rem;
+    height: 2rem;
+}
+header input:hover{
+    border: solid blue 1px;
+}
+header input:focus{
+    border: solid blue 1px;
+}
+
+
+header button{
+    border:none;
+    background-color:rgb(112, 114, 228) ;
+    color: #f4f4f4;
+    font-size: 1.3rem;
+    border-radius: 15px;
+    padding: 3px;
+    margin-left: 40px;
+}
+
+article{
+    white-space: pre-line;                                                            /* without this our paragraph wouldnot be seperated */
+}

@@ -1,0 +1,3 @@
+prev btn should be hidden at first and next btn should be hidden at last
+
+In java script make an array of the slides images and slides number 

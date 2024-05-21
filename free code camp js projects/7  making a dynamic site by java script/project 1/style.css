@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    color: #333;
+
+}
+main{
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ccc;
+}
+h1{
+    text-transform: capitalize;
+    text-align: center;
+    border: solid blue;
+    padding: 0.5rem 0.3rem;
+    background-color: rgb(228, 220, 220);
+    width: 100%;
+}
+h2,h3,h4,h5,h6{
+    text-align: left;
+    padding: 0.4rem 0.5rem;
+}
+.intro-container{
+    border: solid blue;width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+      
+}
+article{
+  border: solid blue;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  button{
+    display: block;
+    margin-top: 2rem;
+  }
+
+  div{
+    margin: 2rem 0;
+  }
+</style>
+</head>
+<body>
+
+  <div class="container1">
+      cont 1
+     <div class="container2">
+       cont 2
+       <div class="container3" id="id of container 3">
+         cont 3
+         <div class="container4">
+           cont 4
+           <div class="container5">
+             cont 5
+             <button class="click">
+               Click here
+             </button>
+           </div>
+         </div>
+       </div>
+     </div>
+  </div>
+
+  <script>
+    const div1=document.querySelector(".container1");
+    const div2=document.querySelector(".container2");
+    const div3=document.querySelector(".container3");
+    const div4=document.querySelector(".container4");
+    const div5=document.querySelector(".container5");
+    const click=document.querySelector(".click");
+
+    /*click.addEventListener("click",showclass,false);
+    div5.addEventListener("click",showclass,false);
+    div4.addEventListener("click",showclass,false);
+    div3.addEventListener("click",showclass,false);
+    div2.addEventListener("click",showclass,false);*/
+    div1.addEventListener("click",showclass,false);
+
+  
+
+    // a listerner function 
+    function showclass(e){
+      console.log("current targt is: "+e.currentTarget.className);
+      console.log('target is: '+e.target.className)
+    }
+
+    function showid(e){
+      console.log(e.currentTarget.id);
+    }
+  </script>
+</body>
+</html>

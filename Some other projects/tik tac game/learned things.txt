@@ -1,0 +1,52 @@
+1) grid-template-columns: repeat(3,auto);
+   here the size of the columns of the grids highly depends upon the width of the grid items.
+   otherwise the default width of any grid item is just to fit the content inside, i.e width:fit-content;
+   so grid columns will be created on this basis.
+
+2) here we use:nth-child(1)   and  :nth-child(3n+1)   highly
+3) we also use ::before  and ::after pseudo classes more highly.
+4) we actually use variables properly in the css // have a look at them 
+
+// pseudo Elements
+the thing about them is they are pseudo not real but they holds information
+so to show them we must specify whether they are block or inline block
+i.e 
+::before,::after{
+    ......
+    ......
+    ......
+    ......
+    display:block; or inline-block;
+}
+
+or put the parent class a display:flex; which automaticly sets the display:block; to it's childrens
+and ::before is a first child and ::after is a last child, actually.
+
+5) and also if position are not mentioned than they are gonna appear side by side 
+since one is first child and another is last child
+but most of the time we use position absolute to them.
+
+6) .game-board.x.cell:hover::before,  here there is almost no any space so it is a only one class
+but .game-board.x .cell:hover::before,  here there is a space so esentially what it is trying to say is 
+          .game-board class also contains .x class and inside this class there must be a .cell class.
+
+
+7) .game-board.x .cell:not(.x):not(.circle):hover::after,
+.game class also must contain .x class and inside this must have .cell class and that .cell class not having .x class and .circle class, apply hover effect to that one 
+and on hovering that .cell class  an ::after pseudo class is formed which holds the provided codes.
+
+so a sense of if statement like .game-board class also contains a .x class than ........
+
+
+8) be careful of overwritten in css
+two different properties in any css class than later one overwrites previous ones so order highly matters here.
+
+
+9) see the css :not   selector used here in this project,  super useful.
+
+10) {once:true}  by this our listerner/function will be called only once.
+
+
+
+
+

@@ -1,0 +1,9 @@
+here java script files are 2 
+in first one i do by very simple method
+in 2 i use two important things
+   1) i use dataset property
+   2) i use .filter() instead of .map() because
+       when there are objects inside the array it
+       is better to use .filter() property because .map()
+       method might not return us array
+       and latter we might need to do return new_array_data.push(item);

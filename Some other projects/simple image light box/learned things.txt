@@ -1,0 +1,4 @@
+1) iF container has childrens the click on container causes click on the 
+childs also and same for childs to container
+
+2) so e.target   and  e.currentTarget becomes useful to determine which 

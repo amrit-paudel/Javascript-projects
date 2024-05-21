@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;height: 100vh;
+    background-color: rgb(129, 129, 48);
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;justify-content: center;
+}
+
+.meter{
+    position: relative;
+    width: 25%;height: 30px; background-color:white;
+    border-radius: 20px;
+    margin: 2rem 0;
+    overflow: hidden;
+}
+.meter::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;left: 0;
+    height: 100%;
+    background-color: yellow;  /* changes by the java script */
+    width: calc(1%*var(--fill));
+    overflow: hidden;
+}
+
+.password-holder{
+    border: none;outline: none;
+    width: 30%;padding: 0.6rem;
+    font-size: 1.3rem;
+}
+.password-holder:focus{
+    border: solid 2px rgb(255, 255, 14);
+}
+
+.remarks{
+    margin-top: 2rem;
+    width: 40%;
+    border: solid yellow 2px;
+    height: max-content;
+    display: flex;flex-direction: column;
+}

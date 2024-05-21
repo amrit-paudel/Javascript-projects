@@ -1,0 +1,232 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgb(34, 33, 33);
+    font-family: sans-serif;
+}
+body{
+    background-color: rgb(230, 84, 84);
+    max-width: 1500px;
+    min-width: 500px;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+ul{
+    list-style: none;padding: 0;
+}
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* these are some default like or some important/ compulsary type of properties */
+
+
+
+nav{
+    display: flex;align-items: center;
+    width: 100vw; 
+    padding: 2rem 0;
+    background-color: rgb(168, 168, 168);
+}
+nav .logo{
+    padding: 0.2rem 0.5rem ;
+    width: 105px;text-align: center;
+   text-shadow: 1px 1px 2px white;
+}
+nav .nav-links{
+    width: 100%;
+}
+nav .nav-list{
+    display: flex;align-items: center;justify-content:center;                                                       /* see we didnot do justify-content:center because we want to adjust by proper margin */
+    width: 100%;
+}
+
+nav .nav-list li a {                                                                           /* see here we won't taret to the <li> we will directly target to the <a> tag */
+ font-size: 0.62rem;
+ padding: 0.3rem 0.5rem;
+ margin: 0 2vw;                                                                         /* a new method applied here margin in vw unite so that properly resized w.r.t vw while resizing */              
+ border: solid 1.2px white;
+ border-radius: 10px;
+}
+nav .nav-list li a:hover{
+    background: rgba(214, 214, 214, 0.8);
+}
+
+
+/* now making the nav bar responsive */
+.menu{
+    position: absolute;
+    font-size: 1.5rem;
+    top: 0.5rem;right: 1rem;
+    display: none;
+}
+
+/* media queries */
+@media(max-width:800px){
+    .menu{
+        display: block;
+    }
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav .nav-list{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;justify-content:space-evenly;                                                       /* see we didnot do justify-content:center because we want to adjust by proper margin among the links themselves */
+        width: 100%;                                                                                                /* also we could do justidy-content:center, spae-between,space-evenly and them do the margins and paddong among the nav links */
+       /* height:200px;*/                                                                                   
+    } 
+    nav .nav-links{
+        position: relative;
+        height:0;overflow: hidden;                                                                    /* this one is latter changing in the java script */
+       transition: height 0.4s ease-in-out;                                                            /* this one just adds the extra beauty while we click on menu bar */
+    }
+
+    nav .add-height{                                                                                    /* try by removing that nav written before add-height  and see the developer tool the class will be added but won't work */             
+        height: 200px;                                                                                  /* this height is going to gets changed latter dynamically by java script */                                           
+    }
+    nav .nav-list li a {                                                                           /* see here we won't taret to the <li> we will directly target to the <a> tag */
+        font-size: 0.8rem;
+        display: block;
+         margin: 0.8rem 1rem;                                                                              /* a new method applied here */              
+        border: none;
+       }
+}
+
+@media(min-width:800px){
+    .nav-links{
+        height: auto!important;                                                                     /*   #######    here is the css     */
+    }
+}
+
+/* now stylling the sections */
+
+section{
+    position: relative;
+    width: 95%;margin: 0 auto;
+    margin-bottom: 2rem;
+    height:100vh;
+    z-index: 999;                                                 /* now in that overlay one we have z-index:-999  */
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 3px black;
+}
+section .section-head{
+    color: #f4f4f4;font-size: 2rem;
+    margin: 1rem 0;
+}
+section .section-para{
+    align-self: flex-start;
+    color: #f4f4f4b4;font-size: 1.2rem;
+    width: 50%;margin: 0 auto;
+    text-align: justify;
+    padding: 0 1rem;
+}
+
+/*media queries to the section */
+@media(max-width:800px){
+    section{
+        height: 80vh;
+    }
+}
+
+#home::after{
+    content: " ";
+    display: block;
+    position: absolute;top: 0;left: 0;width:100%;height: 100%;
+    background-image: url("https://images.pexels.com/photos/130576/pexels-photo-130576.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(56, 56, 58);
+    background-blend-mode: overlay;
+    z-index: -999;
+}
+#about::after{
+    content: " ";
+    display: block;
+    position: absolute;top: 0;left: 0;width:100%;height: 100%;
+    background-image: url("https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(56, 56, 58);
+    background-blend-mode: overlay;
+    z-index: -999;
+}
+#services::after{
+    content: " ";
+    display: block;
+    position: absolute;top: 0;left: 0;width:100%;height: 100%;
+    background-image: url("https://images.pexels.com/photos/3013440/pexels-photo-3013440.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(56, 56, 58);
+    background-blend-mode: overlay;
+    z-index: -999;
+}
+#tours::after{
+    content: " ";
+    display: block;
+    position: absolute;top: 0;left: 0;width:100%;height: 100%;
+    background-image: url("https://images.pexels.com/photos/130576/pexels-photo-130576.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(56, 56, 58);
+    background-blend-mode: overlay;
+    z-index: -999;
+}
+#contact::after{
+    content: " ";
+    display: block;
+    position: absolute;top: 0;left: 0;width:100%;height: 100%;
+    background-image: url("https://images.pexels.com/photos/2132115/pexels-photo-2132115.jpeg?cs=srgb&dl=pexels-quang-nguyen-vinh-2132115.jpg&fm=jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(56, 56, 58);
+    background-blend-mode: overlay;
+    z-index: -999;
+}
+
+footer{
+     display: flex;align-items: center;justify-content: center;
+    padding: 0.5rem 0;
+    margin: 1rem 0;
+    background-color: rgb(168, 168, 168);
+}
+footer span{
+    margin: 0 1rem;
+}
+
+
+
+
+/*this property is going to the java script */
+.fixed-nav{
+    transition: 0.1s ease-out;
+    z-index: 1000;
+    margin-top: 0;
+    position: fixed;top: 0;left: 0;
+    width: 100%;
+    background-color: rgb(168, 168, 168);
+    box-shadow: 1px 1px 2px rgb(71, 69, 69);
+    padding: 2rem 0;
+}
+
+html{
+    scroll-behavior: smooth;                                              /* Links will show up a bit more smoothly */
+}
+

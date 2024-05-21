@@ -1,0 +1,4 @@
+1) good amount of zindex and position property 
+2) different ways of creating the overlay layer in the given container .
+3) adding a nice button and stylling in a very proper way 
+4) mainly all the css and js code related to that button see and observe very properly.

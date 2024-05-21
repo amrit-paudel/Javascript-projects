@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgb(34, 33, 33);
+    font-family: sans-serif;
+}
+img{
+   /* display: block;
+    max-width: 100%;*/
+}
+html{
+    background-color: #feffe9bd;
+}
+ul{
+    list-style: none;padding: 0;
+}
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* these are some default like or some important/ compulsary type of properties */
+
+body{
+    width: 100%;
+    height: auto;
+}
+body>*{
+    width: 80%;
+    margin: 0 auto;
+}
+.page-head{
+    
+    margin: 2rem 0;
+    position: relative;
+    top: 25vh;width: 100%;
+    text-align: center;
+}
+.tab-container{
+    width: 100%;
+    
+    display: flex;
+    position: relative;
+    top: 25vh;
+}
+.image-container {
+ width: 50%;
+ display: flex;align-items: center;justify-content: center;
+ padding:0 0.5rem;
+}
+.tab-content{
+    width: 50%;
+}
+.tab-container .image-container img{
+    width: 100%;
+}
+.tab-links{
+    display: flex;align-items: center;justify-content: space-evenly;
+    height: 3rem;
+}
+.tab-links li{
+    
+    width: 100%;height: 100%;
+}
+.tab-links li a{
+    
+    display: block;
+    width: 100%;height: 100%;
+    display: flex;align-items: center;justify-content: center;
+    background: #ccc;color: #333;
+    font-size: 1.4rem;
+}
+/*.tab-links li a:hover{
+    transition: color 0.5s ease-in-out;                                                            /* makes a bit beautiful */
+    /*background: #333;
+    color: #ccc;
+}*/
+
+.tab-links-content section{
+    
+    margin: 2rem 1rem;padding: 1rem;
+}
+.tab-links-content section h2{
+    text-transform: capitalize;
+    padding: 0.5rem 0;
+}
+
+
+/* just differentiating the tab content */
+#history{background-color: rgb(207, 198, 198);}
+#vision{background-color: rgb(156, 163, 170);}
+#goals{background-color: rgb(247, 194, 150);}
+
+
+/* this one is going in the java script */
+.disp-show{
+    display: block;
+}
+.disp-none{
+    display: none;
+}
+.tab-links .active{
+    transition: 0.2s ease-in-out;
+    background: #333;
+    color: #ccc;
+}

@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav{
+    
+    display: flex;align-items: center;justify-content: center;
+    background-color: #333;
+    position: relative;                                                    /* for the latter on ( position absolute ) menu bar */
+}
+.nav-logo{
+    width: 20%;
+    
+    margin: 0.5rem;
+}
+.nav-logo>p{
+    text-transform: uppercase;
+    padding: 0.5rem 0.3rem;
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #ccc;
+}
+.nav-links{
+    width: 100%;
+    
+   background-color: #333;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.nav-links>li{
+    list-style-type: none;
+}
+.nav-links>li>a{
+    text-decoration: none;
+    color: #ccc;
+    
+    padding: 1rem; margin: 0 0.2rem;                                 /* it is the very important property of all the above property and also a new try for the nav bar */
+    text-transform:uppercase ;
+    font-size: 0.8rem;
+    /*just a little bit of transition */
+    transition-property: background;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    transition-delay: 0.0001s;
+}
+.nav-links>li>a:hover{
+    background: #555;
+    color: #f4f4f4;
+}
+
+/*making the menu bar */
+.menu-bar{
+position:absolute;
+top: 1rem;right: 2rem;
+display:none;
+}
+.menu-bar:hover{
+    cursor: pointer;
+}
+
+.menu-bar>li{
+    list-style: none;
+    
+    padding: 2px 18px ;
+    margin: 6px 0;
+    border-radius: 3px;
+    background-color: #ccc;
+}
+
+/*now adding the media queries */
+@media(max-width:750px){
+    .menu-bar{
+        display: block;
+    }
+    .nav-links{
+        display: none;
+        width: 100%;
+    }
+    nav{
+        
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links{
+        
+        flex-direction: column;
+
+    }
+    .nav-links>li{width: 100%;}                                /* it is set only for the anchor tag inside of it otherwise it has no any proper use */
+
+    .nav-links>li>a{
+        display: block;
+        
+        margin: 0.5rem 0;
+        width:100%;
+    }
+    
+    .active{
+        display: flex;
+    }
+
+
+}

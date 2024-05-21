@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> An responsive site with the help of the css Grid </title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/brands.min.css"
+    integrity="sha512-AMDXrE+qaoUHsd0DXQJr5dL4m5xmpkGLxXZQik2TvR2VCVKT/XRPQ4e/LTnwl84mCv+eFm92UG6ErWDtGM/Q5Q=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/284b1fda39.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Amrit's To Do List </h1>
+  </header>
+  <form>
+    <input type="text" class="to-do-input">
+    <button class="add">
+      <i class="fas fa-plus-square"></i>
+    </button>
+
+    <div class="select">
+      <select name="todos" id="filter-todo">
+        <option value="all">All</option>
+        <option value="completed">Completed</option>
+        <option value="uncompleted">Uncompleted</option>
+      </select>
+    </div>
+  </form>
+  <div class="to-do-container">
+    <ul class="to-do-list"></ul>
+  </div>
+
+
+  <script src="new1.js"></script>
+</body>
+
+</html>

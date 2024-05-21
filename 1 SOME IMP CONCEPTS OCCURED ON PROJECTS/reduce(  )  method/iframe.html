@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1> heading of the webpage </h1>
+<script>
+    //1) reduce() method can reduce the array to  a single value 
+    var array=[10,20,30,40,50];
+    const sum_data=array.reduce((total,item)=>{
+        return total+item;                               // here jva script assigns the total value as the first value of the array item 
+    })
+    console.log(sum_data)
+    // 2) reduce method can reduce the array to another array 
+
+    var arr=[10,20,30,40,50];
+    const newarray=arr.reduce((new_arr,item)=>{
+        new_arr.push(item+1);
+        return new_arr;
+    },[]);
+    console.log(newarray)
+
+    console.log(arr.includes(10))
+</script>
+</body>
+</html>

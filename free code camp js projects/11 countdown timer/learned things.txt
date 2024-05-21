@@ -1,0 +1,11 @@
+first of all make the layout and do all css stuffs
+1) use java script template to make the deadline looks dynamic 
+
+Algorithm for the count down
+1) get all the required variables
+2) calculate the future giveaway time
+3) get the current time
+4) get every days, hours , minutes, days by a function  and set them to the container
+5) since current time is changing calling that function in every second will 
+   show us decreasing time.
+6) might show negative time so we have clear interval method to stop that

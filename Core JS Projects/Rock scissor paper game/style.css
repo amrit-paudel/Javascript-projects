@@ -1,0 +1,55 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.header{
+    width: 75%;
+    /*height: minmax(100vh,auto);*/
+    height: 100vh;
+    background-color: khaki;
+    margin: 0px auto;
+    position: relative;
+}
+.images{
+   /* border: solid blue;*/
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20vh;
+    
+}
+.images div{
+    width: 200px;
+    height: 200px;
+   /* border: solid blue;  */
+}
+ /* APPLYING THE HOVERING EFFECT */
+ .images div:hover{
+     cursor: pointer;
+ }
+
+
+img{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+h2{
+   /* border: solid blue;*/
+    margin:20px 0px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+
+
+button{
+    border: solid blue;
+    position: absolute;
+    top: 80%;left: 50%;transform: translate(-50%,0);
+    font-weight: 700;font-size: 2rem;
+}
+

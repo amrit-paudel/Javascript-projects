@@ -1,0 +1,16 @@
+better use of transition proerty 
+see that.fixed-nav class
+smooth scroll
+
+Algorithm of smooth scrolling
+1) getting all the links 
+2) preventing the default properties within them 
+3) getting the required section element attached with the links 
+4) getting the top position of all those section element 
+5) using window.scroll to and putting the required coordinates.
+// let say on clicking to the link and after going to the corresponding section element
+   we want to close the menu tab . close inside that click function 
+6) if something like nav bar is present then we need to substract that
+   height from the top position to get the precise top-position  of the sectiion container .
+
+next time correct the nav height and also fix the problem of small screen

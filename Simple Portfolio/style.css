@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(120deg,#9c8743 ,#7ec004);
+    color: white;
+    min-width: 500px;max-width: 1800px;
+}
+a{
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+li{
+    list-style: none;
+}
+
+/*  STYLLING THE NAV BAR   */
+nav{
+    display: flex;
+    justify-content: center;align-items: center;
+    background-image: linear-gradient(120deg,rgb(1, 41, 1),rgb(4, 143, 4),rgb(51, 255, 51));
+    width: 100%;margin: 0 auto;
+    padding: 1rem;
+}
+@media(max-width:1052px){
+    nav{
+        width: 100%;
+    }
+}
+@media(max-width:760px){
+    nav{
+        width: 100%;
+    }
+}
+@media(max-width:590px){
+    nav{
+        width: 100%;
+    }
+}
+
+nav li{
+    
+    width:120px;margin: 0 0.2rem;
+    border-radius: 5px;
+}
+nav li a{
+    display: inline-block;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center;
+    font-size: 1.2rem;border-radius: 5px;
+    color: white;letter-spacing: 2.2px;
+    padding: 0.2rem 0.5rem;
+    transition: background-color 0.4s ease 0.1s;
+    transition: color 0.5s ease ;
+    transition: transform 0.5s ease ;
+}
+nav li a:hover{
+ background-color: #a6ff00;
+ color: teal;
+ transform: scale(1.2);
+}
+
+/*    STYLLING THE BODY SECTIONS    */
+section#home{
+    
+    margin-top: 1rem;
+    
+    width: 100%;height: 80vh;
+    display: flex;align-items: center;justify-content: center;
+}
+section#home h2{
+    width: 400px;
+    letter-spacing: 4px;
+    word-spacing: 15px;
+    text-align: center;
+    background-image: linear-gradient(420deg,#e5ff00,#00810b);
+    padding: 1rem;
+    font-size: 1.5rem;
+    box-shadow: 2px 2px 200px #00810b;
+    text-shadow: 0.5px 0.5px 3px rgba(255, 255, 255, 0.397);
+}
+
+section#knowme{
+    
+    margin-top: 1rem;
+    width: 100%;
+    height: 80vh;
+    display: flex;align-items: center;justify-content: center;
+}
+section#knowme p{
+    font-size: 1.2rem;
+    word-spacing: 10px;
+    width: 50%;
+    padding: 1rem;text-align: justify;box-shadow: 1px 1px 200px #00810b;
+
+}
+@media(max-width:800px){
+    section#knowme p{
+        width: 50vh;
+    }
+}
+
+section#services{
+    
+    width: 100%;height: 100vh;
+    display: flex;flex-direction: column; align-items: center;justify-content: center;
+
+}
+section#services h2{
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+section#services li{
+    
+    font-size: 1.5rem;
+    text-align: left;
+    margin: 2rem 0;
+    width: 100%;
+    padding-left: 4rem;
+}
+
+section#contact{
+    
+    width: 100%;
+    height: 100vh;
+    display: flex;flex-direction: column;align-items: center;justify-content: flex-start;
+    padding: 1.5rem;
+}
+label,input{display: block;}
+section#contact h2{
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+label{
+    font-size: 2rem;
+    margin-top: 1.5rem;margin-bottom: 0.5rem;
+}
+input{
+    border: none;outline: none;
+    width: 400px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.2rem;
+    
+}
+input[type="number"]{
+    appearance:textfield;
+}
+
+button{
+    border: none;outline: none;
+    text-transform: capitalize;
+    background-image: linear-gradient(120deg,rgb(255, 196, 0),rgb(0, 68, 255));
+    padding: 0.5rem 1rem;
+    margin-top: 1.2rem;
+    border-radius: 8px;
+    transition: background-image 0.5s ease 0.1s;
+    transition: transform 0.5s ease 0.1s;
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    color: white;
+}
+button:hover{
+    background-image: linear-gradient(120deg,rgb(76, 0, 255),rgb(0, 255, 0));
+    transform: scale(1.1);
+}
+
+section{
+   border-bottom: solid white 0.5px;
+}
+
+.fixed{
+    position: fixed;left: 0;top: 0;
+    width: 100%;
+}

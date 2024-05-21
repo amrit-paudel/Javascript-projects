@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right,  rgb(183, 255, 50),rgb(0, 255, 76),rgb(0, 255, 115),rgb(5, 255, 59));
+}
+
+main{width: 100%; height: 100vh;  display:flex; justify-content:flex-start; align-items:center;}
+
+.circleOfClock{
+    width: 500px;
+    height: 500px;
+    border: solid blue;
+    border-radius: 50%;
+    margin-left: 4rem;
+    background-color: rgba(0, 255, 128,0.4);
+    position: relative;
+}
+
+.circleOfClock .number{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;justify-content: center;
+}
+
+/* stylling the hour, minutes and second hands */
+.circleOfClock .minutes-hand, .hour-hand, .second-hand{ 
+    position: absolute;top: 50%;left: 50%;transform: translate(-50%,-100%);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transform-origin: bottom;
+    z-index: 10;
+}
+
+.circleOfClock .minutes-hand{
+    background-color: brown;
+    width: 10px;height: 215px;
+ 
+    --rotation:0;
+    transform:  translate(-50%,-100%) rotate(calc(var(--rotation) * 1deg));
+    transform-origin: bottom;
+}
+.circleOfClock .hour-hand{
+    background-color: rgb(73, 148, 89);
+    width: 8px;height: 200px;
+    --rotation:0;
+    transform:  translate(-50%,-100%) rotate(calc(var(--rotation) * 1deg));
+}
+.circleOfClock .second-hand{
+    background-color: red;
+    width: 2px;height: 225px;
+    --rotation:0;
+    transform:  translate(-50%,-100%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.circleOfClock::after{
+    content: '';
+    position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);
+    background-color: rgb(59, 68, 67);
+    width: 25px;height: 25px;
+    border-radius: 50%;
+    z-index: 11;
+}
+
+
+/* stylling the numbers */
+.circleOfClock .number{
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}
+.circleOfClock .number1{
+    transform: rotate(30deg);
+}
+.circleOfClock .number2{
+    transform: rotate(60deg);
+}
+.circleOfClock .number3{
+    transform: rotate(90deg);
+}
+.circleOfClock .number4{
+    transform: rotate(120deg);
+}
+.circleOfClock .number5{
+    transform: rotate(150deg);
+}
+.circleOfClock .number6{
+    transform: rotate(180deg);
+}
+.circleOfClock .number7{
+    transform: rotate(210deg);
+}
+.circleOfClock .number8{
+    transform: rotate(240deg);
+}
+.circleOfClock .number9{
+    transform: rotate(270deg);
+}
+.circleOfClock .number10{
+    transform: rotate(300deg);
+}
+.circleOfClock .number11{
+    transform: rotate(330deg);
+}
+
+

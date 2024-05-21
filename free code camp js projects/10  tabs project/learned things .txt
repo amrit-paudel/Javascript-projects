@@ -1,0 +1,12 @@
+1)  see the linking string among the tab links, images and among the tab content
+
+2) proper markup and proper css than only java script 
+3) good amount of use of functions especially that adding active class part 
+     java script algo 
+1) getting all the tab links 
+2) putting events and calling functions 
+3) accessing the tab content, through tab links linked by tab-links inner text  and tab content id's
+4) showing current content on click and hiding rest 
+5) showing the different images on different click 
+
+NOTE THIS CAN BE PROGRAMMED ALSO BY DATA SET TRY THAT ONE ALSO.

@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(124, 119, 119);
+}
+header{
+    width: 90%;
+    margin: 1rem auto;
+    
+}
+
+header > h1{
+    
+    font-family: sans-serif;
+    width: 35%;
+    margin: 1rem auto;
+    text-align: center;
+    background-color: #333;
+    color: #f4f4f4;
+    border-radius: 10px;
+    padding: 0px 5px;
+}
+
+video{
+    
+    padding: 2px;
+    border-radius: 8px;
+    max-width: 100%;
+}
+
+.buttons{
+    
+    position: relative;
+    width: 120px;
+    display: flex;align-items: center;justify-content: center;
+    
+}
+
+.buttons > span{
+    font-family: sans-serif;
+    text-transform: uppercase;
+    padding: 3px 5px;
+    border-radius: 8px;
+    
+    color: #f4f4f4;
+}
+.buttons > span:nth-child(1){
+    margin: 0 5px;
+}
+.buttons .switch{
+ 
+ padding: 10px 29px;
+ background-color: blueviolet;
+ position: absolute;
+ top: 0;left: 0;
+}
+
+.buttons .slide{
+ 
+    padding: 10px 29px;
+    background-color: blueviolet;
+    position: absolute;
+    top: 0;right: 0;
+   }
+
+
+
+
+
+
+
+
+
+
+/*header{
+    position: relative;
+}
+header>h1{
+    font-family: sans-serif;font-size: 2.5rem;color: white;
+    position: absolute;z-index: 4;top: 50%;left: 50%;transform: translate(-50%,-50%);
+}
+.video-container{
+   width: 100%;
+    height: 100%;
+    position: relative;z-index: 1;
+}
+header::after{
+    content: " ";
+    position: absolute;
+    top:0;left: 0;
+    width: 100%;height: 100%;
+    z-index: 3;
+    background-color: black;
+    opacity: 0.6;
+
+    /*background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;*/  
+
+    /*background: rgba(0, 0, 0, 0.6);                                              /* overlay could be achieved by any method mentioned here */
+    /*z-index: 4; */
+}
+
+/*stylling the beautiful switching buttons */
+/*.buttons{
+    position: absolute;
+    bottom: 20%;left: 5%;
+    z-index: 5;color: white;text-transform: capitalize;
+    display: flex;justify-content: space-between;
+    font-family: sans-serif;
+}
+.buttons>span{
+    
+    width: 50px;height: 30px;
+    display: flex;align-items: center;justify-content: center;
+    border-radius: 5px;
+}
+.switch{
+    background-color: rgb(113, 113, 241);
+    padding: 0 20px;
+    position: absolute;
+    transition: 3s;
+}
+*/
+
+/* this one is going to the java cript */
+/*.slide{
+    left: 50%;
+}
+*/

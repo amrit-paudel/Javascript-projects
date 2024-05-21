@@ -1,0 +1,4 @@
+1) for smaller ones like nav bar items set padding not width.
+2) set padding and margin to anchor tag and it works fine we
+   do not need to work on the <li> which is the container of <a> 
+3) see the media query part and java script part.
